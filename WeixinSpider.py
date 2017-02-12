@@ -1,5 +1,6 @@
 # !/usr/bin/env python
 # encoding=utf-8
+# author: 知乎@路人甲
 from __future__ import print_function
 
 import os
@@ -400,7 +401,7 @@ def main():
         print('正在下载第：' + str(imageIndex) + '位好友头像')
         d[Member['UserName']] = (Member['NickName'], Member['RemarkName'])
 
-        province = Member['Province']
+        province = Member['Province']  #增加字段
 
         province = 'noprovince' if province == '' else province
 
@@ -423,6 +424,7 @@ def main():
 
         print(province)
 
+        ## 添加代码，需要重新写一下
         csvfile = file('/Users/apple/Desktop/wx/wx.csv', 'ab+')
         writer = csv.writer(csvfile)
         data = []
